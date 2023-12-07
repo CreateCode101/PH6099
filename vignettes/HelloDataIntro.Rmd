@@ -1,0 +1,58 @@
+---
+title: "HelloDataIntro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{HelloDataIntro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(HelloData)
+```
+
+## How to use this package
+This package provides an easy introduction to any new data set.
+
+Lets take the below simplistic data set.
+```{r}
+first_column <- rep("A",10)
+second_column <- runif(n=10, min=1, max=20)
+third_column <- c(1,2,NA,NA,5,6,7,8,9,10)
+df <- data.frame(first_column, second_column, third_column)
+```
+
+The first function returns basic information about the data set.
+```{r}
+intro(df)
+```
+Now we know how many columns and rows there are in a human readable format.
+
+
+The second function expands on the first with more information on the columns.
+```{r}
+intro_columns(df)
+```
+The third function identifies any row with missing values.
+```{r}
+rows_with_missing_values(df)
+```
+
+The fourth function expands on the third by identifying which columns have missing values.
+
+```{r}
+missing_values_by_column(df)
+```
+
+The final function provides histograms for all numeric variables.
+```{r}
+histograms(df)
+```
+

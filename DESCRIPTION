@@ -1,0 +1,15 @@
+Package: HelloData
+Title: This package provides functions that can introduce you to a data set in a human readable format
+Version: 1.0.0
+Authors@R: 
+    person("Kyle", "Duffy", , "duffyk89@ufl.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package contains functions that help provide an overview and understanding of a new dataset.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
